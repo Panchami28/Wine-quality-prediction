@@ -143,26 +143,25 @@ Outputs:
 
 Confusion matrix:
 
-`[[412  18]`
-`          `
-`[ 31  19]]`
+```markdown
+[[412  18]
+[ 31  19]]
+```
  
  Accuracy score:
  0.8979166666666667
  
  Classification report:
-
+```markdown
                 precision    recall  f1-score   support
 
            0       0.93      0.96      0.94       430
            1       0.51      0.38      0.44        50
 
-    accuracy       0.90       480
-`                                                    `    
-`  macro avg       0.72      0.67      0.69       480`
-`                                                     `
-`weighted avg       0.89      0.90      0.89       480`
-
+    accuracy       0.90       480                                                    `    
+   macro avg       0.72      0.67      0.69       480
+weighted avg       0.89      0.90      0.89       480
+```
 
 ```markdown
 ```
