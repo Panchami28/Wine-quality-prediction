@@ -108,20 +108,54 @@ X = df.drop(['quality','goodquality'], axis = 1)
 y = df['goodquality']
 ```
 
+Normalizing the feature variables is a useful technique to transform attributes with a Gaussian distribution and differing means and standard deviations to a standard Gaussian distribution with a mean of 0 and a standard deviation of 1.We can standardize data using scikit-learn with the StandardScaler class.
 ```markdown
+from sklearn.preprocessing import StandardScaler
+#X_features = X
+X = StandardScaler().fit_transform(X)
+```
+
+Then we split the dataset wherein 70% of data is used to train the model and the remaining 30% of it is used for testing.
+```markdown
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.3, random_state=0)
+```
+
+### Performing ML algorithm
+### 1)Logistic regression:
+```markdown
+from sklearn.linear_model import LogisticRegression
+logmodel = LogisticRegression()
+logmodel.fit(X_train,y_train)
+predictions = logmodel.predict(X_test)
 ```
 
 
 ```markdown
+from sklearn.metrics import confusion_matrix,classification_report,accuracy_score
+print(confusion_matrix(y_test,predictions))
+print(accuracy_score(y_test,predictions))
+print(classification_report(y_test,predictions))
 ```
+Outputs:
 
+Confusion matrix:
+[[412  18]
+ [ 31  19]]
+ 
+ Accuracy score:
+ 0.8979166666666667
+ 
+ Classification report:
 
-```markdown
-```
+             precision    recall  f1-score   support
 
+           0       0.93      0.96      0.94       430
+           1       0.51      0.38      0.44        50
 
-```markdown
-```
+    accuracy                           0.90       480
+   macro avg       0.72      0.67      0.69       480
+weighted avg       0.89      0.90      0.89       480
 
 
 ```markdown
