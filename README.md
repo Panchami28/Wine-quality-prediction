@@ -98,7 +98,9 @@ df['goodquality'] = [1 if x >= 7 else 0 for x in df['quality']]
 df['goodquality'].value_counts()
 ```
 Output:
+
 0  -  1382
+
 1  -  217
 
 
@@ -141,9 +143,9 @@ Outputs:
 
 Confusion matrix:
 
-`[[412  18]
+`[[412  18]`
 
- [ 31  19]]`
+` [ 31  19]]`
  
  Accuracy score:
  0.8979166666666667
@@ -156,8 +158,10 @@ Confusion matrix:
            1       0.51      0.38      0.44        50
 
     accuracy       0.90       480
-`  macro avg       0.72      0.67      0.69       480
-weighted avg       0.89      0.90      0.89       480`
+    
+   macro avg       0.72      0.67      0.69       480
+
+weighted avg       0.89      0.90      0.89       480
 
 
 ```markdown
