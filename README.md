@@ -3,11 +3,9 @@
 
 "Wine has been a part of civilized life for some seven thousand years. It is the only beverage that feeds the body, soul and spirit of man and at the same time stimulates the mind..." 
 This is a quote by Robert Mondavi
-I was wondering if we could predict the quality of wine when the values of its features are given to us. But doing so manually takes many years of experience,expertise and deep knowledge in the field of wine. Its a minutes job with machine learning. Using suitable model and training the model using suitable dataset yields us the answer.
-Wine quality prediction can be solved as classification or regression problem.
+Having said that ,I was wondering if we could predict the quality of wine when the values of its features are given to us. But doing so manually takes many years of experience,expertise and deep knowledge in the field of wine. Its a seconds job with machine learning. Using suitable model and training the model using suitable dataset yields us the answer.
+Wine quality prediction can be solved as classification or regression problem. Here we are solving it as a classification problem. The main objective of this project is to experiment with the various classification models and pick out the model yielding highest accuracy.
 
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
