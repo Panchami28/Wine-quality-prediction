@@ -87,6 +87,7 @@ In the dataset that we have chosen, quality of wine is given using a number betw
 fig = px.histogram(df,x='quality')
 fig.show()
 ```
+![Image](https://towardsdatascience.com/predicting-wine-quality-with-several-classification-techniques-179038ea6434)
 For the output of histogram check the jupyter notebook in [github]()
 
 ### Preprocessing the data
@@ -139,10 +140,9 @@ print(confusion_matrix(y_test,predictions))
 print(accuracy_score(y_test,predictions))
 print(classification_report(y_test,predictions))
 ```
-Outputs:
+OUTPUT:
 
 Confusion matrix:
-
 ```markdown
 [[412  18]
 [ 31  19]]
@@ -163,9 +163,34 @@ Confusion matrix:
 weighted avg       0.89      0.90      0.89       480
 ```
 
+### 2) SVM
 ```markdown
+from sklearn.svm import SVC
+model = SVC()
+model.fit(X_train,y_train)
+predictions = model.predict(X_test)
+```
+OUTPUT:
+
+Confusion matrix:
+```markdown
+[[419  11]
+ [ 32  18]]
+```
+ 
+ Classification report:
+ ```markdown
+              precision    recall  f1-score   support
+
+           0       0.93      0.97      0.95       430
+           1       0.62      0.36      0.46        50
+
+    accuracy                           0.91       480
+   macro avg       0.77      0.67      0.70       480
+weighted avg       0.90      0.91      0.90       480
 ```
 
+Let's try to increase the accuracy
 
 ### Jekyll Themes
 
