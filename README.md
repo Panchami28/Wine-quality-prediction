@@ -158,7 +158,7 @@ Confusion matrix:
            0       0.93      0.96      0.94       430
            1       0.51      0.38      0.44        50
 
-    accuracy       0.90       480                                                    `    
+    accuracy                           0.90       480                                                    `    
    macro avg       0.72      0.67      0.69       480
 weighted avg       0.89      0.90      0.89       480
 ```
@@ -191,6 +191,56 @@ weighted avg       0.90      0.91      0.90       480
 ```
 
 Let's try to increase the accuracy
+```markdown
+from sklearn.model_selection import GridSearchCV
+#Finding best parameters for our SVC model
+param = {
+    'C': [0.1,0.8,0.9,1,1.1,1.2,1.3,1.4],
+    'kernel':['linear', 'rbf'],
+    'gamma' :[0.1,0.8,0.9,1,1.1,1.2,1.3,1.4]
+}
+grid_svc = GridSearchCV(SVC(), param_grid=param,refit=True,verbose=3)
+```
+
+```markdown
+grid_svc.fit(X_train, y_train)
+#Best parameters for our svc model
+grid_svc.best_params_
+```
+
+Output:
+```markdown
+{'C': 1.4, 'gamma': 0.8, 'kernel': 'rbf'}
+```
+
+```markdown
+grid_pred=grid_svc.predict(X_test)
+print(confusion_matrix(y_test,grid_pred))
+print(accuracy_score(y_test,grid_pred))
+print(classification_report(y_test,grid_pred))
+```
+
+OUTPUT:
+Confusion matrix:
+```markdown
+[[421   9]
+ [ 27  23]]
+```
+ 
+ Accuracy score:
+0.925
+ 
+ Classification report:
+```markdown
+              precision    recall  f1-score   support
+
+           0       0.94      0.98      0.96       430
+           1       0.72      0.46      0.56        50
+
+    accuracy                           0.93       480
+   macro avg       0.83      0.72      0.76       480
+weighted avg       0.92      0.93      0.92       480
+```
 
 ### Jekyll Themes
 
