@@ -126,15 +126,13 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.3, random_s
 
 ### Performing ML algorithm
 ### 1)Logistic regression:
+In logistic regression,the dependent variable is binary in nature having data coded as either 1 (stands for success/yes) or 0 (stands for failure/no).
 ```markdown
 from sklearn.linear_model import LogisticRegression
 logmodel = LogisticRegression()
 logmodel.fit(X_train,y_train)
 predictions = logmodel.predict(X_test)
-```
 
-
-```markdown
 from sklearn.metrics import confusion_matrix,classification_report,accuracy_score
 print(confusion_matrix(y_test,predictions))
 print(accuracy_score(y_test,predictions))
@@ -149,7 +147,7 @@ Confusion matrix:
 ```
  
  Accuracy score:
- 0.8979166666666667
+`0.8979166666666667`
  
  Classification report:
 ```markdown
@@ -169,6 +167,11 @@ from sklearn.svm import SVC
 model = SVC()
 model.fit(X_train,y_train)
 predictions = model.predict(X_test)
+
+from sklearn.metrics import confusion_matrix,classification_report,accuracy_score
+print(confusion_matrix(y_test,predictions))
+print(accuracy_score(y_test,predictions))
+print(classification_report(y_test,predictions))
 ```
 OUTPUT:
 
@@ -190,10 +193,10 @@ Confusion matrix:
 weighted avg       0.90      0.91      0.90       480
 ```
 
-Let's try to increase the accuracy
+Let's try to increase the accuracy by finding the best parameters for our SVC model
 ```markdown
 from sklearn.model_selection import GridSearchCV
-#Finding best parameters for our SVC model
+
 param = {
     'C': [0.1,0.8,0.9,1,1.1,1.2,1.3,1.4],
     'kernel':['linear', 'rbf'],
@@ -227,8 +230,8 @@ Confusion matrix:
  [ 27  23]]
 ```
  
- Accuracy score:
-0.925
+Accuracy score:
+`0.925`
  
  Classification report:
 ```markdown
