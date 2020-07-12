@@ -98,9 +98,7 @@ df['goodquality'] = [1 if x >= 7 else 0 for x in df['quality']]
 df['goodquality'].value_counts()
 ```
 Output:
-
 0  -  1382
-
 1  -  217
 
 
