@@ -22,7 +22,7 @@ alcohol.
 
 ## Setup
 
-###Importing the required modules
+### Importing the required modules
 We start out by importing the standard libraries
 
 ```markdown
@@ -33,14 +33,14 @@ import seaborn as sns
 import plotly.express as px
 %matplotlib inline
 ```
-###Loading the dataset
+### Loading the dataset
 Dataset is then loaded into the notebook and converted to a dataframe
 
 ```markdown
 df=pd.read_csv('datasets_4458_8204_winequality-red.csv')
 ```
 
-###Gaining information about the dataset
+### Gaining information about the dataset
 Reading the data and gaining information
 ```markdown
 df.head()
@@ -52,7 +52,7 @@ print(df.isna().sum())
 ```
 There are no missing values in this dataset.Hence it is not necessary to drop any columns. 
 
-###Exploratory data analysis (EDA)
+### Exploratory data analysis (EDA)
 Now that we came to know about the data that we are using for tarining the model, let us perform some EDA (Exploratory data aanalysis) to understand the relationship between various input variables and its variation with the output
 
 ```markdown
@@ -87,7 +87,7 @@ fig.show()
 ```
 For the output of histogram check the jupyter notebook in [github]()
 
-###Preprocessing the data
+### Preprocessing the data
 Now that sufficient data analysis has been done, some data preprocessing has to be done. Since its a classification problem we take another attribute named good quality that has only 2 states (i.e. 1 for good quality an 0 for bad quality). Wine is considered to be of good quality if 'x' value is greater than or equal to 7. Otherwise it is considered to be of bad quality.
 
 ```markdown
@@ -96,9 +96,10 @@ df['goodquality'] = [1 if x >= 7 else 0 for x in df['quality']]
 df['goodquality'].value_counts()
 ```
 Output:
-0    1382
-1     217
-Name: goodquality, dtype: int64
+0  -  1382
+
+1  -  217
+
 
 Next we separate feature variables and target variable
 ```markdown
