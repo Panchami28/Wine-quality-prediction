@@ -6,7 +6,19 @@ This is a quote by Robert Mondavi
 
 Having said that ,I was wondering if we could predict the quality of wine when the values of its features are given to us. But doing so manually takes many years of experience,expertise and deep knowledge in the field of wine. Its a seconds job with machine learning. Using suitable model and training the model using suitable dataset yields us the answer.
 
-Wine quality prediction can be solved as classification or regression problem. Here we are solving it as a classification problem. The main objective of this project is to experiment with the various classification models and pick out the model yielding highest accuracy. We have made use of Kaggle's red wine dataset in this project. Click [here](https://github.com/Panchami28/Wine-quality-prediction/blob/master/datasets_4458_8204_winequality-red.csv) to download the dataset.
+Wine quality prediction can be solved as classification or regression problem. Here we are solving it as a classification problem. The main objective of this project is to experiment with the various classifier models and pick out the model yielding highest accuracy. We have made use of Kaggle's red wine dataset in this project. Click [here](https://github.com/Panchami28/Wine-quality-prediction/blob/master/datasets_4458_8204_winequality-red.csv) to download the dataset. In this dataset , quality of red wine is determined by 11 input variables namely
+
+Fixed acidity
+Volatile acidity
+Citric acid
+Residual sugar
+Chlorides
+Free sulfur dioxide
+Total sulfur dioxide
+Density
+pH
+Sulfates
+Alcohol
 
 
 ### Markdown
