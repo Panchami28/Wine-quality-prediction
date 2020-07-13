@@ -1,7 +1,7 @@
 ## Introduction
 
 
-"Wine has been a part of civilized life for some seven thousand years. It is the only beverage that feeds the body, soul and spirit of man and at the same time stimulates the mind..." 
+"Wine has been a part of civilized life for some seven thousand years. It is the only beverage that feeds the body, soul and spirit of man and at the same time stimulates the mind...." 
 This is a quote by Robert Mondavi
 
 Having read that , I was wondering if we could predict the quality of wine when the values of its features are given to us. While doing so manually takes many years of experience,expertise and deep knowledge in the field of wine, its a seconds job with machine learning. Using suitable model and training the model using suitable dataset yields us the answer.
