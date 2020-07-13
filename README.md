@@ -181,10 +181,8 @@ OUTPUT:
 
 Confusion matrix:
 ```markdown
-  TP   FP
 [[419  11]
-[ 32  18]]
-  FN   TN
+ [ 32  18]]
 ```
  
  Classification report:
@@ -220,6 +218,7 @@ grid_svc.best_params_
 Output: `{'C': 1.4, 'gamma': 0.8, 'kernel': 'rbf'}`
 
 Now with the best value for c and gamma, let us check the accuracy provided by the model
+
 ```markdown
 grid_pred=grid_svc.predict(X_test)
 print(confusion_matrix(y_test,grid_pred))
@@ -266,7 +265,7 @@ OUTPUT:
 Confusion matrix:
 ```markdown
 [[414  16]
-[ 21  29]]
+ [ 21  29]]
 ```
 Accuracy score:
 `0.9229166666666667`
