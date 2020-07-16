@@ -20,7 +20,6 @@ pH,
 sulfates,
 alcohol.
 
-
 ## Setup
 
 ### Importing the required modules
