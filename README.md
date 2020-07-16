@@ -1,6 +1,5 @@
 ## Introduction
 
-
 "Wine has been a part of civilized life for some seven thousand years. It is the only beverage that feeds the body, soul and spirit of man and at the same time stimulates the mind...." 
 This is a quote by Robert Mondavi
 
