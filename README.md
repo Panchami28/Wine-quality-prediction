@@ -8,7 +8,7 @@ Having read that , I was wondering if we could predict the quality of wine when 
 
 ![Image](https://miro.medium.com/max/575/0*OGDB-JY7IDYQE48U.jpg)
 
-Wine quality prediction can be solved as classification or regression problem. Here we are solving it as a classification problem. The main objective of this project is to experiment with the various classifier models and pick out the model yielding highest accuracy. We have made use of Kaggle's red wine dataset in this project. Click [here](https://github.com/Panchami28/Wine-quality-prediction/blob/master/datasets_4458_8204_winequality-red.csv) to download the dataset. In this dataset , quality of red wine is determined by 11 input variables namely 
+Wine quality prediction can be solved as classification or regression problem. Here we are solving it as a classification problem.**The main objective of this project is to experiment with the various classifier models and pick out the model yielding highest accuracy.** We have made use of Kaggle's red wine dataset to arrive at the result for this project. **Click [here](https://github.com/Panchami28/Wine-quality-prediction/blob/master/datasets_4458_8204_winequality-red.csv) to download the dataset.** In this dataset, quality of red wine is determined by 11 input variables namely 
 fixed acidity,
 volatile acidity,
 citric acid,
@@ -25,8 +25,7 @@ alcohol.
 ## Setup
 
 ### Importing the required modules
-We start out by importing the standard libraries
-
+We start out by importing the standard libraries that are required for the various computations
 ```markdown
 import numpy as np
 import pandas as pd
@@ -37,13 +36,12 @@ import plotly.express as px
 ```
 ### Loading the dataset
 Dataset is then loaded into the notebook and converted to a dataframe
-
 ```markdown
 df=pd.read_csv('datasets_4458_8204_winequality-red.csv')
 ```
 
 ### Gaining information about the dataset
-Reading the data and gaining information
+Reading the data, gaining information and thereby having a clear understanding of the data
 ```markdown
 df.head()
 print("Rows, columns: " + str(df.shape))
@@ -56,7 +54,6 @@ There are no missing values in this dataset.Hence it is not necessary to drop an
 
 ### Exploratory data analysis (EDA)
 Now that we came to know about the data that we are using for tarining the model, let us perform some EDA (Exploratory data aanalysis) to understand the relationship between various input variables and its variation with the output
-
 ```markdown
 fig = plt.figure(figsize = (10,6))
 sns.barplot(x = 'quality', y = 'fixed acidity', data = df)
@@ -124,14 +121,15 @@ from sklearn.preprocessing import StandardScaler
 X = StandardScaler().fit_transform(X)
 ```
 
+### Splitting the data
 Then we split the dataset wherein 70% of data is used to train the model and the remaining 30% of it is used for testing.
 ```markdown
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.3, random_state=0)
 ```
 
-### Performing ML algorithm
-### 1)Logistic regression:
+### Performing ML algorithm (Modelling)
+### MODEL 1)Logistic regression:
 In logistic regression,the dependent variable is binary in nature having data coded as either 1 (stands for success/yes) or 0 (stands for failure/no).
 ```markdown
 from sklearn.linear_model import LogisticRegression
@@ -168,7 +166,7 @@ Classification report:
 weighted avg       0.89      0.90      0.89       480
 ```
 
-### 2) SVM
+### MODEL 2) SVM
 A support vector machine (SVM) is a supervised machine learning model that uses classification algorithms for two-group classification problems. After giving an SVM model sets of labeled training data for each category, they're able to categorize new text. So you're working on a text classification problem.
 
 ```markdown
@@ -253,7 +251,7 @@ Accuracy score:
 weighted avg       0.92      0.93      0.92       480
 ```
 
-### 3) Random forest
+### MODEL 3) Random forest
 Random forest is a supervised learning algorithm. The "forest" it builds, is an ensemble of decision trees, usually trained with the “bagging” method. The general idea of the bagging method is that a combination of learning models increases the overall result.
 
 ```markdown
@@ -286,4 +284,6 @@ Classification report:
    macro avg       0.80      0.77      0.78       480
 weighted avg       0.92      0.92      0.92       480
 ```
-By taking note of all the outputs , we can see that SVM with accuracy score of 0.925 and Random forest with accuracy score 0.923 are suitable for this problem. 
+By taking note of all the outputs , we can see that SVM with accuracy score of 0.925 and Random forest with accuracy score 0.923 are suitable for this problem. However Logistic regression on the other hand is not very suitable for this problem as it's accuracy score is 0.89 which is the least compared to other 2 algorithms.
+There are many other classification algorithms that can be used to solve the above scenario. But for this blog, I have considered only 3 popular classification models.
+
