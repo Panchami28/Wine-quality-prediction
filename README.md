@@ -136,7 +136,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.3, random_s
 ```
 
 ### Performing ML algorithm (Modelling)
-### MODEL 1) Logistic regression:
+### Model 1) Logistic regression:
 In logistic regression,the dependent variable is binary in nature having data coded as either 1 (stands for success/yes) or 0 (stands for failure/no).
 ```markdown
 from sklearn.linear_model import LogisticRegression
@@ -173,7 +173,7 @@ Classification report:
 weighted avg       0.89      0.90      0.89       480
 ```
 
-### MODEL 2) SVM
+### Model 2) SVM
 A support vector machine (SVM) is a supervised machine learning model that uses classification algorithms for two-group classification problems. After giving an SVM model sets of labeled training data for each category, they're able to categorize new text. So you're working on a text classification problem.
 
 ```markdown
@@ -259,7 +259,7 @@ Accuracy score:
 weighted avg       0.92      0.93      0.92       480
 ```
 
-### MODEL 3) Random forest
+### Model 3) Random forest
 Random forest is a supervised learning algorithm. The "forest" it builds, is an ensemble of decision trees, usually trained with the “bagging” method. The general idea of the bagging method is that a combination of learning models increases the overall result.
 
 ```markdown
