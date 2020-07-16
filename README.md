@@ -168,7 +168,7 @@ Classification report:
            0             0.93      0.96      0.94       430
            1             0.51      0.38      0.44        50
 
-    accuracy                                 0.90       480                                                    `    
+    accuracy                                  0.90       480                                                    `    
    macro avg       0.72      0.67      0.69       480
 weighted avg       0.89      0.90      0.89       480
 ```
@@ -202,7 +202,7 @@ Confusion matrix:
            0            0.93      0.97      0.95       430
            1            0.62      0.36      0.46        50
 
-    accuracy                                0.91       480
+    accuracy                                 0.91       480
    macro avg       0.77      0.67      0.70       480
 weighted avg       0.90      0.91      0.90       480
 ```
@@ -254,7 +254,7 @@ Accuracy score:
            0           0.94      0.98      0.96       430
            1           0.72      0.46      0.56        50
 
-    accuracy                               0.93       480
+    accuracy                                 0.93       480
    macro avg       0.83      0.72      0.76       480
 weighted avg       0.92      0.93      0.92       480
 ```
@@ -288,7 +288,7 @@ Classification report:
            0           0.95      0.96      0.96       430
            1           0.64      0.58      0.61        50
 
-    accuracy                               0.92       480
+    accuracy                                 0.92       480
    macro avg       0.80      0.77      0.78       480
 weighted avg       0.92      0.92      0.92       480
 ```
