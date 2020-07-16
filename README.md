@@ -92,7 +92,7 @@ fig = px.histogram(df,x='quality')
 fig.show()
 ```
 
-For the output of histogram check the jupyter notebook in [github]()
+For the output of histogram check the jupyter notebook in [github](https://github.com/Panchami28/Wine-quality-prediction/blob/master/Wine_quality.ipynb)
 
 ### Preprocessing the data
 Now that sufficient data analysis has been done, some data preprocessing has to be done. Since its a classification problem we take another attribute named good quality that has only 2 states (i.e. 1 for good quality an 0 for bad quality). Wine is considered to be of good quality if 'x' value is greater than or equal to 7. Otherwise it is considered to be of bad quality.
