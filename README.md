@@ -34,6 +34,7 @@ import seaborn as sns
 import plotly.express as px
 %matplotlib inline
 ```
+
 ### Loading the dataset
 Dataset is then loaded into the notebook and converted to a dataframe using pandas library
 ```markdown
@@ -43,7 +44,9 @@ df=pd.read_csv('datasets_4458_8204_winequality-red.csv')
 ### Gaining information about the dataset
 Reading the data, gaining information and thereby having a clear understanding of the data
 ```markdown
+# Printing first 5 rows of dataframe
 df.head()
+# Printing no. of rows and columns in the dataset
 print("Rows, columns: " + str(df.shape))
 df.describe()
 df.info()
@@ -107,7 +110,6 @@ Output:
 
 1  -  217
 
-
 Next we separate feature variables and target variable
 ```markdown
 X = df.drop(['quality','goodquality'], axis = 1)
@@ -136,7 +138,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.3, random_s
 ```
 
 ### Performing ML algorithm (Modelling)
-### MODEL 1)Logistic regression:
+### MODEL 1) Logistic regression:
 In logistic regression,the dependent variable is binary in nature having data coded as either 1 (stands for success/yes) or 0 (stands for failure/no).
 ```markdown
 from sklearn.linear_model import LogisticRegression
@@ -187,7 +189,7 @@ print(confusion_matrix(y_test,predictions))
 print(accuracy_score(y_test,predictions))
 print(classification_report(y_test,predictions))
 ```
-OUTPUT:
+**OUTPUT:**
 
 Confusion matrix:
 ```markdown
@@ -236,7 +238,8 @@ print(accuracy_score(y_test,grid_pred))
 print(classification_report(y_test,grid_pred))
 ```
 
-OUTPUT:
+**OUTPUT:** 
+
 Confusion matrix:
 ```markdown
 [[421   9]
@@ -270,7 +273,7 @@ print(confusion_matrix(y_test,y_pred2))
 print(accuracy_score(y_test,y_pred2))
 print(classification_report(y_test, y_pred2))
 ```
-OUTPUT:
+**OUTPUT:**
 
 Confusion matrix:
 ```markdown
